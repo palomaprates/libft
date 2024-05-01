@@ -6,12 +6,12 @@
 /*   By: pprates- <pprates-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 21:06:50 by paloma            #+#    #+#             */
-/*   Updated: 2024/04/23 11:48:15 by pprates-         ###   ########.fr       */
+/*   Updated: 2024/05/01 17:37:48 by pprates-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
-// #include <stdlib.h>
+#include <stdlib.h>
 // #include <string.h>
 
 size_t	ft_strlcat(char *dest, const char  *src, size_t dest_size)
