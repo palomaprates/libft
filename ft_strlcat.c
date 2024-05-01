@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paloma <paloma@student.42.fr>              +#+  +:+       +#+        */
+/*   By: pprates- <pprates-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 21:06:50 by paloma            #+#    #+#             */
-/*   Updated: 2024/04/19 23:20:13 by paloma           ###   ########.fr       */
+/*   Updated: 2024/04/23 11:48:15 by pprates-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+// #include <stdio.h>
+// #include <stdlib.h>
+// #include <string.h>
 
 size_t	ft_strlcat(char *dest, const char  *src, size_t dest_size)
 {
@@ -40,13 +40,12 @@ size_t	ft_strlcat(char *dest, const char  *src, size_t dest_size)
 	dest[j] = '\0';
 	return total;
 }
-
-int	main()
-{
-	char dest[15] = "1234";
-	char src[40] = "8904";
-	// printf("%zu\n", ft_strlcat(dest, src, 5));
-	printf("%zu\n", strlcat(dest, src, 5));
-	printf("%s\n", dest);
-	return (0);
-}
+// int	main()
+// {
+// 	char dest[15] = "1234";
+// 	char src[40] = "8904";
+// 	// printf("%zu\n", ft_strlcat(dest, src, 5));
+// 	printf("%zu\n", strlcat(dest, src, 5));
+// 	printf("%s\n", dest);
+// 	return (0);
+// }

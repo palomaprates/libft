@@ -1,24 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pprates- <pprates-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/20 11:40:09 by paloma            #+#    #+#             */
-/*   Updated: 2024/04/23 11:48:24 by pprates-         ###   ########.fr       */
+/*   Created: 2024/04/08 16:09:05 by pprates-          #+#    #+#             */
+/*   Updated: 2024/04/23 11:57:34 by pprates-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-int	ft_tolower(int c)
+int	ft_strlen(char *str)
 {
-	if (c >= 'A' && c <= 'Z')
-		c += 32;
-	return (c);
+	int	i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return i;
 }
-// int main()
-// {
-// 	printf("%c\n", ft_tolower('Z'));
-// 	return(0);
-// }

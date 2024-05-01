@@ -1,24 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pprates- <pprates-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/20 11:40:09 by paloma            #+#    #+#             */
-/*   Updated: 2024/04/23 11:48:24 by pprates-         ###   ########.fr       */
+/*   Created: 2024/04/23 15:03:24 by pprates-          #+#    #+#             */
+/*   Updated: 2024/04/23 15:57:19 by pprates-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
-int	ft_tolower(int c)
+#include <stdlib.h>
+
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	if (c >= 'A' && c <= 'Z')
-		c += 32;
-	return (c);
+	unsigned char	*temp;
+	size_t			i;
+
+	i = 0;
+	temp = malloc(sizeof(char) * (nmemb * size));
+	if (nmemb == 0 || size == 0)
+		return (NULL);
+	while (temp[i])
+	{
+		temp[i] = '\0';
+		i++;
+	}
+	return (temp);
 }
+
 // int main()
 // {
-// 	printf("%c\n", ft_tolower('Z'));
-// 	return(0);
+// 	unsigned char *str;
+// 	str = ft_calloc(2, 3);
+// 	printf("%s\n", str); 
+// 	return (0);
 // }

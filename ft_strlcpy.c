@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paloma <paloma@student.42.fr>              +#+  +:+       +#+        */
+/*   By: pprates- <pprates-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 21:06:50 by paloma            #+#    #+#             */
-/*   Updated: 2024/04/20 09:15:58 by paloma           ###   ########.fr       */
+/*   Updated: 2024/04/23 11:48:17 by pprates-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+// #include <stdio.h>
+// #include <stdlib.h>
+// #include <string.h>
 
 size_t	ft_strlcpy(char *dest, const char  *src, size_t dest_size)
 {
@@ -31,12 +31,12 @@ size_t	ft_strlcpy(char *dest, const char  *src, size_t dest_size)
 	return (src_len);
 }
 
-int	main()
-{
-	char dest[15] = "1234";
-	char src[40] = "6313123";
-	printf("%zu\n", ft_strlcpy(dest, src, 2));
-	printf("%zu\n", strlcpy(dest, src, 2));
-	printf("%s\n", dest);
-	return (0);
-}
+// int	main()
+// {
+// 	char dest[15] = "1234";
+// 	char src[40] = "6313123";
+// 	printf("%zu\n", ft_strlcpy(dest, src, 2));
+// 	printf("%zu\n", strlcpy(dest, src, 2));
+// 	printf("%s\n", dest);
+// 	return (0);
+// }

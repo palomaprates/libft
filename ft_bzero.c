@@ -1,24 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pprates- <pprates-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/20 11:40:09 by paloma            #+#    #+#             */
-/*   Updated: 2024/04/23 11:48:24 by pprates-         ###   ########.fr       */
+/*   Created: 2024/04/16 11:07:45 by pprates-          #+#    #+#             */
+/*   Updated: 2024/04/23 11:56:16 by pprates-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
-int	ft_tolower(int c)
+
+void	ft_bzero(void *s, size_t n)
 {
-	if (c >= 'A' && c <= 'Z')
-		c += 32;
-	return (c);
+	size_t i;
+	unsigned char *temp_s;
+
+	i = 0;
+	temp_s = s;
+	while (i < n)
+	{
+		temp_s[i] = '\0';
+		i++;
+	}
 }
 // int main()
 // {
-// 	printf("%c\n", ft_tolower('Z'));
-// 	return(0);
+//     unsigned char s[6];
+//     ft_bzero(s, 5);
+//     printf("%s", s);
+//     return (0);
 // }
