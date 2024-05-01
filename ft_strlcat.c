@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: pprates- <pprates-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/18 21:06:50 by paloma            #+#    #+#             */
-/*   Updated: 2024/05/01 17:37:48 by pprates-         ###   ########.fr       */
+/*   Created: 2024/05/01 21:06:09 by pprates-          #+#    #+#             */
+/*   Updated: 2024/05/01 21:06:13 by pprates-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdlib.h>
 // #include <string.h>
 
-size_t	ft_strlcat(char *dest, const char  *src, size_t dest_size)
+size_t	ft_strlcat(char *dest, const char *src, size_t dest_size)
 {
 	size_t	i;
 	size_t	j;
@@ -26,7 +26,6 @@ size_t	ft_strlcat(char *dest, const char  *src, size_t dest_size)
 		i++;
 	while (dest[j])
 		j++;
-	
 	if (dest_size <= j)
 		return (dest_size + i);
 	total = i + j;
@@ -38,7 +37,7 @@ size_t	ft_strlcat(char *dest, const char  *src, size_t dest_size)
 		i++;
 	}
 	dest[j] = '\0';
-	return total;
+	return (total);
 }
 // int	main()
 // {

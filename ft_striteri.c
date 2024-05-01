@@ -1,11 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pprates- <pprates-@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/05/01 20:50:12 by pprates-          #+#    #+#             */
+/*   Updated: 2024/05/01 20:50:55 by pprates-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
+
 void	ft_tolower(char *c)
 {
 	if (*c >= 'A' && *c <= 'Z')
 		*c += 32;
 }
 
-void ft_striteri(char *s, void (*f)(char*))
+void	ft_striteri(char *s, void (*f)(char*))
 {
 	unsigned int	i;
 
@@ -16,9 +29,9 @@ void ft_striteri(char *s, void (*f)(char*))
 		i++;
 	}
 }
-int main()
-{
-	char *s = "tEsTE";
-	ft_striteri(s, ft_tolower);
-	printf("%s", s);
-}
+// int main()
+// {
+// 	char *s = "tEsTE";
+// 	ft_striteri(s, ft_tolower);
+// 	printf("%s", s);
+// }

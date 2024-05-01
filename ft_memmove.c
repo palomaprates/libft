@@ -6,7 +6,7 @@
 /*   By: pprates- <pprates-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 12:01:23 by pprates-          #+#    #+#             */
-/*   Updated: 2024/04/23 17:45:43 by pprates-         ###   ########.fr       */
+/*   Updated: 2024/05/01 20:46:44 by pprates-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 void	*ft_memmove(void *dest, const void *src, size_t len)
 {
 	unsigned char			*temp;
-	unsigned const char	*temp_src;
+	unsigned const char		*temp_src;
 	unsigned char			*temp_dest;
 	size_t					i;
 

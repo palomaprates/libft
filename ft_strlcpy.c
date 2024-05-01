@@ -6,7 +6,7 @@
 /*   By: pprates- <pprates-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 21:06:50 by paloma            #+#    #+#             */
-/*   Updated: 2024/04/23 11:48:17 by pprates-         ###   ########.fr       */
+/*   Updated: 2024/05/01 20:54:54 by pprates-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 // #include <stdlib.h>
 // #include <string.h>
 
-size_t	ft_strlcpy(char *dest, const char  *src, size_t dest_size)
+size_t	ft_strlcpy(char *dest, const char *src, size_t dest_size)
 {
-	size_t i;
-	size_t src_len;
+	size_t	i;
+	size_t	src_len;
 
 	i = 0;
 	src_len = 0;

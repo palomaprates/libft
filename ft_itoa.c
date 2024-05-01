@@ -6,12 +6,13 @@
 /*   By: pprates- <pprates-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 18:33:58 by pprates-          #+#    #+#             */
-/*   Updated: 2024/05/01 20:28:05 by pprates-         ###   ########.fr       */
+/*   Updated: 2024/05/01 20:40:59 by pprates-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
+
 int	get_len(int n)
 {
 	int	i;
@@ -22,17 +23,18 @@ int	get_len(int n)
 		i++;
 		n *= -1;
 	}
-	while(n > 0)
+	while (n > 0)
 	{
 		n = n / 10;
 		i++;
 	}
 	return (i);
 }
+
 char	*ft_itoa(int n)
 {
 	char	*str;
-	int	len;
+	int		len;
 
 	len = get_len(n);
 	str = malloc(sizeof(char) * len + 1);
@@ -45,7 +47,7 @@ char	*ft_itoa(int n)
 		str[0] = '-';
 		n *= -1;
 	}
- 	while (n > 0)
+	while (n > 0)
 	{
 		str[len] = n % 10 + 48;
 		n = n / 10;
@@ -54,9 +56,8 @@ char	*ft_itoa(int n)
 	return (str);
 }
 
-
-int main()
-{
-	printf("%s\n", ft_itoa(-154));
-	return (0);
-}
+//int main()
+// {
+// 	printf("%s\n", ft_itoa(-154));
+// 	return (0);
+// }
