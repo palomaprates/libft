@@ -1,24 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pprates- <pprates-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/20 11:40:09 by paloma            #+#    #+#             */
-/*   Updated: 2024/04/23 11:48:24 by pprates-         ###   ########.fr       */
+/*   Created: 2024/04/23 11:16:22 by pprates-          #+#    #+#             */
+/*   Updated: 2024/04/23 11:50:12 by pprates-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
-int	ft_tolower(int c)
+
+char	*ft_strrchr(const char *s, int c)
 {
-	if (c >= 'A' && c <= 'Z')
-		c += 32;
-	return (c);
+	int	i;
+
+	i = 0;
+	while (s[i])
+		i++;
+	while (i > 0)
+	{
+		if (s[i] == c)
+			return ((char *)&s[i]);
+		i--;
+	}
+	return (NULL);
 }
 // int main()
 // {
-// 	printf("%c\n", ft_tolower('Z'));
-// 	return(0);
+// 	printf("%s\n", ft_strrchr("acbc", 'c'));
+// 	return (0);
 // }

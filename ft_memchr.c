@@ -1,35 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pprates- <pprates-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/20 22:26:46 by paloma            #+#    #+#             */
-/*   Updated: 2024/04/23 13:54:53 by pprates-         ###   ########.fr       */
+/*   Created: 2024/04/23 12:01:53 by pprates-          #+#    #+#             */
+/*   Updated: 2024/04/23 12:27:45 by pprates-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
-char	*ft_strchr(const char *s, int c)
-{
-	int	i;
 
+void	*ft_memchr(const void *s, int c, size_t n)
+{
+	unsigned const char	*temp_s;
+	unsigned char			temp_c;
+	size_t					i;
+
+	temp_c = c;
+	temp_s = s;
 	i = 0;
-	while (s[i])
+
+	while (i < n)
 	{
-		if (s[i] == c)
+		if (temp_s[i] == temp_c)
 			return ((char*)&s[i]);
 		i++;
 	}
-	if (c == s[i])
-		return ((char*)&s[i]);
 	return (NULL);
 }
-// int	main()
-// {
-// 	printf("%s\n", ft_strchr("abcd", 'b'));
-// 	printf("%s\n", strchr("abcd", 'b'));
-// 	return (0);
-// }
+int main()
+{
+	unsigned const char s[5] = "bcad";
+	unsigned char *result;
+	unsigned char *teste;
+	result = ft_memchr(s, 'a', 3);
+	teste = memchr(s, 'a', 3);
+	printf("minha: %s\n", result);
+	printf("original: %s\n", teste);
+}

@@ -1,24 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pprates- <pprates-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/20 11:40:09 by paloma            #+#    #+#             */
-/*   Updated: 2024/04/23 11:48:24 by pprates-         ###   ########.fr       */
+/*   Created: 2024/04/08 16:21:08 by pprates-          #+#    #+#             */
+/*   Updated: 2024/04/23 11:48:11 by pprates-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
-int	ft_tolower(int c)
+
+void	*ft_memset(void *s, int c, size_t n)
 {
-	if (c >= 'A' && c <= 'Z')
-		c += 32;
-	return (c);
+	size_t i;
+	unsigned char *temp_s;
+	unsigned char temp_c;
+
+	i = 0;
+	temp_s = s;
+	temp_c = c;
+	while (i < n)
+	{
+		temp_s[i] = temp_c;
+		i++;
+	}
+	temp_s[i] = '\0';
+	return (s);
 }
 // int main()
 // {
-// 	printf("%c\n", ft_tolower('Z'));
-// 	return(0);
+//     unsigned char s[4];
+//     ft_memset(s, 'A', 3);
+//     printf("%s", s);
+//     return (0);
 // }
