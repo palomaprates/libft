@@ -3,19 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pprates- <pprates-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: paloma <paloma@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 11:15:29 by pprates-          #+#    #+#             */
-/*   Updated: 2024/05/01 20:46:17 by pprates-         ###   ########.fr       */
+/*   Updated: 2024/05/04 10:41:30 by paloma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
+#include "libft.h"
 
 void	ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned char			*temp_dest;
-	unsigned const char		*temp_src;
+	unsigned const char	*temp_src;
 	size_t					i;
 
 	temp_dest = dest;

@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pprates- <pprates-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: paloma <paloma@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 11:29:10 by paloma            #+#    #+#             */
-/*   Updated: 2024/05/01 21:03:29 by pprates-         ###   ########.fr       */
+/*   Updated: 2024/05/04 10:37:39 by paloma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
@@ -22,7 +21,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		return ((char *)&big[i]);
 	while (big[i] && i < len)
 	{
-		if (strncmp(&big[i], little, strlen(little)) == 0)
+		if (ft_strncmp(&big[i], little, ft_strlen(little)) == 0)
 			return ((char *)&big[i]);
 		i++;
 	}
