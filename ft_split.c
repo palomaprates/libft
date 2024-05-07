@@ -6,11 +6,11 @@
 /*   By: pprates- <pprates-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 17:55:51 by pprates-          #+#    #+#             */
-/*   Updated: 2024/05/07 14:35:06 by pprates-         ###   ########.fr       */
+/*   Updated: 2024/05/07 14:43:22 by pprates-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+// #include <stdio.h>
 #include "libft.h"
 
 int	count_words(char const *s, char c)
@@ -22,19 +22,20 @@ int	count_words(char const *s, char c)
 	j = 0;
 	while (s[i])
 	{
-		if ((s[i + 1] == c && s[i] != c) 
-		|| (s[i + 1] == '\0' && s[i] != c))
+		if ((s[i + 1] == c && s[i] != c)
+			|| (s[i + 1] == '\0' && s[i] != c))
 			j++;
 		i++;
 	}
 	return (j);
 }
+
 char	**ft_split(char const *s, char c)
 {
 	char	**new_str;
-	int	words_nbr;
-	int	i;
-	int	j;
+	int		words_nbr;
+	int		i;
+	int		j;
 
 	words_nbr = count_words(s, c);
 	new_str = malloc(sizeof(char *) * (words_nbr + 1));
@@ -58,15 +59,15 @@ char	**ft_split(char const *s, char c)
 	return (new_str[j] = NULL, new_str);
 }
 
-int	main()
-{
-	char const s[] = "--teste----oi-a";
-	char	**new_str;
-	new_str = ft_split(s,'-');
-	while(*new_str)
-	{
-		printf("%s\n", *new_str);
-		new_str++;
-	}
-	return (0);
-}
+// int	main()
+// {
+// 	char const s[] = "--teste----oi-a";
+// 	char	**new_str;
+// 	new_str = ft_split(s,'-');
+// 	while(*new_str)
+// 	{
+// 		printf("%s\n", *new_str);
+// 		new_str++;
+// 	}
+// 	return (0);
+// }
