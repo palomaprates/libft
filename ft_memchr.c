@@ -6,12 +6,11 @@
 /*   By: pprates- <pprates-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 12:01:53 by pprates-          #+#    #+#             */
-/*   Updated: 2024/05/01 20:45:19 by pprates-         ###   ########.fr       */
+/*   Updated: 2024/05/07 15:57:00 by pprates-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paloma <paloma@student.42.fr>              +#+  +:+       +#+        */
+/*   By: pprates- <pprates-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 11:47:49 by paloma            #+#    #+#             */
-/*   Updated: 2024/05/04 10:36:05 by paloma           ###   ########.fr       */
+/*   Updated: 2024/05/07 16:54:25 by pprates-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	i = 0;
 	new = malloc(sizeof(char) * (len + 1));
-	if (!new || start >= ft_strlen(s))
+	if (!new || start >= (unsigned int)ft_strlen((char *)s))
 		return (NULL);
 	while (s[start] && i < len)
 	{

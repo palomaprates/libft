@@ -1,3 +1,9 @@
+NAME = libft.a
+
+CC = cc
+
+CFLAGS = -Wall -Wextra -Werror
+
 SRCS = ft_tolower.c                   \
 			ft_toupper.c                 \
 			ft_substr.c                  \
@@ -33,8 +39,6 @@ SRCS = ft_tolower.c                   \
 
 OBJS = $(SRCS:.c=.o)
 
-NAME = libft.a
-
 all: $(NAME)
 
 $(NAME): $(OBJS)
@@ -47,3 +51,4 @@ fclean: clean
 	rm -rf $(NAME)
 
 re: fclean all
+

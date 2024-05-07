@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   teste.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pprates- <pprates-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 17:55:51 by pprates-          #+#    #+#             */
-/*   Updated: 2024/05/07 16:41:16 by pprates-         ###   ########.fr       */
+/*   Updated: 2024/05/07 16:40:56 by pprates-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,6 @@ int	count_words(char const *s, char c)
 	return (j);
 }
 
-static void	ft_free(char **new_str, int j)
-{
-	while (j > 0)
-		free(new_str[j--]);
-	free(new_str);
-}
 char	**ft_split(char const *s, char c)
 {
 	char	**new_str;
@@ -51,17 +45,14 @@ char	**ft_split(char const *s, char c)
 	while (j < words_nbr)
 	{
 		while (s[i] && s[i] == c)
-			i++:
+			i++;
 		s = s + i;
 		i = 0;
 		while (s[i] && s[i] != c)
 			i++;
 		new_str[j] = malloc(sizeof(char) * (i + 1));
 		if (!new_str[j])
-		{
-			ft_free(new_str, j);
-			return (NULL);
-		}
+			return (ft_free(new_str));
 		ft_strlcpy(new_str[j++], s, ++i);
 	}
 	return (new_str[j] = NULL, new_str);

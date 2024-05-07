@@ -6,19 +6,18 @@
 /*   By: pprates- <pprates-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 16:22:14 by pprates-          #+#    #+#             */
-/*   Updated: 2024/05/01 21:02:20 by pprates-         ###   ########.fr       */
+/*   Updated: 2024/05/07 16:45:28 by pprates-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
-char	ft_toupper(char c)
-{
-	if (c >= 'a' && c <= 'z')
-		c -= 32;
-	return (c);
-}
+// static char	ft_toupper1(char c)
+// {
+// 	if (c >= 'a' && c <= 'z')
+// 		c -= 32;
+// 	return (c);
+// }
 
 char	*ft_strmapi(char const *s, char (*f)(char))
 {

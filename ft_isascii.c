@@ -6,13 +6,15 @@
 /*   By: pprates- <pprates-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 15:50:09 by pprates-          #+#    #+#             */
-/*   Updated: 2024/04/23 11:56:34 by pprates-         ###   ########.fr       */
+/*   Updated: 2024/05/07 18:05:04 by pprates-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_isascii(int c)
 {
-	if (!(c >= 0 && c < 127))
+	if (!(c >= 0 && c <= 127))
 		return (0);
 	return (1);
 }

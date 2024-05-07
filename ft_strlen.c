@@ -6,11 +6,13 @@
 /*   By: pprates- <pprates-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 16:09:05 by pprates-          #+#    #+#             */
-/*   Updated: 2024/05/01 20:55:21 by pprates-         ###   ########.fr       */
+/*   Updated: 2024/05/07 18:30:55 by pprates-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+#include "libft.h"
+
+int	ft_strlen(const char *str)
 {
 	int	i;
 

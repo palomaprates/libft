@@ -6,14 +6,13 @@
 /*   By: pprates- <pprates-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 17:33:18 by pprates-          #+#    #+#             */
-/*   Updated: 2024/04/23 14:46:58 by pprates-         ###   ########.fr       */
+/*   Updated: 2024/05/07 17:25:26 by pprates-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-// #include <stdlib.h>
+#include "libft.h"
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int	i;
 	int	nbr;
