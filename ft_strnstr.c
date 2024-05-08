@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pprates- <pprates-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: paloma <paloma@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 11:29:10 by paloma            #+#    #+#             */
-/*   Updated: 2024/05/07 19:14:58 by pprates-         ###   ########.fr       */
+/*   Updated: 2024/05/08 22:00:32 by paloma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,19 @@
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
+	size_t	size_little;
 
 	i = 0;
-	if (!little || little == big)
+	size_little = ft_strlen(little);
+	if (!little || !little[0])
 		return ((char *)&big[i]);
-	if (!len || !big)
+	if (len == 0 || !big)
 		return (NULL);
-	while (big[i] && i < len - 1)
+	while (big[i] && i < len)
 	{
-		if (ft_strncmp(&big[i], little, ft_strlen((char *)little)) == 0)
+		if (size_little > len - i)
+			return (NULL);
+		if (ft_strncmp(&big[i], little, size_little) == 0)
 			return ((char *)&big[i]);
 		i++;
 	}
@@ -31,6 +35,6 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 }
 // int	main()
 // {
-// 	printf("%s\n", ft_strnstr("t1este123t", "este", 2));
+// 	printf("%s\n", ft_strnstr("caaaaolina", "ina", 7));
 // 	return (0);
 // }
