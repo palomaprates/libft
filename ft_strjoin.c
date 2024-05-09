@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pprates- <pprates-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: paloma <paloma@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 17:10:29 by pprates-          #+#    #+#             */
-/*   Updated: 2024/05/07 17:26:47 by pprates-         ###   ########.fr       */
+/*   Updated: 2024/05/09 21:55:41 by paloma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -29,14 +30,17 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	new = malloc(sizeof(char) * (i + j + 1));
 	if (!new)
 		return (NULL);
+	new[0] = '\0';
 	ft_strlcat(new, (char *)s1, i + j + 1);
 	ft_strlcat(new, (char *)s2, i + j + 1);
 	return (new);
 }
 // int	main()
 // {
-// 	char s1[6] = "teste";
-// 	char s2[4] = "123";
-// 	printf("%s\n", ft_strjoin(s1, s2));
+// 	// char s1[6] = "";
+// 	// char s2[4] = "42";
+// 	char *s = ft_strjoin("", "");
+// 	printf("%d\n", strcmp(s, ""));
+
 // 	return (0);
 // }

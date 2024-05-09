@@ -77,4 +77,6 @@ int	ft_tolower(int c);
 
 int	ft_toupper(int c);
 
+char	**ft_split(char const *s, char c);
+
 #endif

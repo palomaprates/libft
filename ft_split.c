@@ -6,7 +6,7 @@
 /*   By: paloma <paloma@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 17:55:51 by pprates-          #+#    #+#             */
-/*   Updated: 2024/05/08 17:11:44 by paloma           ###   ########.fr       */
+/*   Updated: 2024/05/09 21:37:07 by paloma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,31 +51,28 @@ char	**ft_split(char const *s, char c)
 	while (j < words_nbr)
 	{
 		while (s[i] && s[i] == c)
-			i++:
+			i++;
 		s = s + i;
 		i = 0;
 		while (s[i] && s[i] != c)
 			i++;
 		new_str[j] = malloc(sizeof(char) * (i + 1));
 		if (!new_str[j])
-		{
-			ft_free(new_str, j);
-			return (NULL);
-		}
+			return (ft_free(new_str, j), NULL);
 		ft_strlcpy(new_str[j++], s, ++i);
 	}
 	return (new_str[j] = NULL, new_str);
 }
 
-int	main()
-{
-	char const s[] = "--teste----oi-a";
-	char	**new_str;
-	new_str = ft_split(s,'-');
-	while(*new_str)
-	{
-		printf("%s\n", *new_str);
-		new_str++;
-	}
-	return (0);
-}
+// int	main()
+// {
+// 	char const s[] = "--teste----oi-a";
+// 	char	**new_str;
+// 	new_str = ft_split(s,'-');
+// 	while(*new_str)
+// 	{
+// 		printf("%s\n", *new_str);
+// 		new_str++;
+// 	}
+// 	return (0);
+// }
