@@ -5,6 +5,12 @@
 # include <unistd.h>
 # include <stdio.h>
 
+typedef struct s_list
+{
+	void *content;
+	struct s_list *next;
+} t_list;
+
 //STRINGS---------+++-+-+-+
 size_t	ft_strlcat(char *dest, const char *src, size_t dest_size);
 
