@@ -1,15 +1,6 @@
 #include "libft.h"
 #include <string.h>
 
-t_list *ft_lstnew(void *content)
-{
-	t_list *new;
-
-	new = malloc(sizeof(t_list));
-	new->content = content;
-	new->next = NULL;
-	return (new);
-}
 void ft_lstadd_front(t_list **lst, t_list *new)
 {
 	t_list	*current;
@@ -34,5 +25,4 @@ int	main()
 		printf("%s\n", (char *)test->content);
 		test = test->next;
 	}
-
 }

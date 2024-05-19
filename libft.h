@@ -26,6 +26,8 @@ void	ft_striteri(char *s, void (*f)(char*));
 
 char	*ft_strjoin(char const *s1, char const *s2);
 
+char	*ft_strtrim(char const *s1, char* set);
+
 size_t	ft_strlcpy(char *dest, const char *src, size_t dest_size);
 
 int	ft_strlen(const char *str);
@@ -84,5 +86,19 @@ int	ft_tolower(int c);
 int	ft_toupper(int c);
 
 char	**ft_split(char const *s, char c);
+
+// LIST------------------------
+
+t_list	*ft_lstnew(void *content);
+
+void	ft_lstadd_front(t_list **lst, t_list *new);
+
+void	ft_lstadd_back(t_list **lst, t_list *new);
+
+t_list	*ft_lstlast(t_list *lst);
+
+int	ft_lstsize(t_list *lst);
+
+void	ft_lstiter(t_list *lst, void (*f)(void *));
 
 #endif

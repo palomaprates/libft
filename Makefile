@@ -37,8 +37,18 @@ SRCS = ft_tolower.c                   \
 			ft_calloc.c                  \
 			ft_bzero.c                   \
 			ft_atoi.c                    \
+			ft_strtrim.c                 \
+
+BONUS = ft_lstnew.c                    \
+			ft_lstadd_front.c             \
+			ft_lstsize.c                  \
+			ft_lstlast.c                  \
+			ft_lstadd_back.c              \
+			ft_lstiter.c                  \
 
 OBJS = $(SRCS:.c=.o)
+
+BONUS_OBJ = $(BONUS:.c=.o)
 
 all: $(NAME)
 
