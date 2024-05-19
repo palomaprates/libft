@@ -1,7 +1,6 @@
 #include "libft.h"
-#include <string.h>
 
-void ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	t_list	*current;
 
@@ -13,16 +12,16 @@ void ft_lstadd_front(t_list **lst, t_list *new)
 	new->next = *lst;
 	*lst = new;
 }
-int	main()
-{
-	t_list *test;
-	test = NULL;
+// int	main()
+// {
+// 	t_list *test;
+// 	test = NULL;
 
-	ft_lstadd_front(&test, ft_lstnew(strdup("3")));
-	ft_lstadd_front(&test, ft_lstnew(strdup("2")));
-	while(test)
-	{
-		printf("%s\n", (char *)test->content);
-		test = test->next;
-	}
-}
+// 	ft_lstadd_front(&test, ft_lstnew(strdup("3")));
+// 	ft_lstadd_front(&test, ft_lstnew(strdup("2")));
+// 	while(test)
+// 	{
+// 		printf("%s\n", (char *)test->content);
+// 		test = test->next;
+// 	}
+// }

@@ -1,19 +1,8 @@
 #include "libft.h"
-#include <string.h>
 
-// t_list *ft_lstnew(void *content)
-// {
-// 	t_list *new;
-
-// 	new = malloc(sizeof(t_list));
-// 	new->content = content;
-// 	new->next = NULL;
-// 	return (new);
-// }
-
-void ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list *current;
+	t_list	*current;
 
 	current = *lst;
 	if (!*lst)
@@ -21,7 +10,7 @@ void ft_lstadd_back(t_list **lst, t_list *new)
 		*lst = new;
 		return ;
 	}
-	while(current->next)
+	while (current->next)
 		current = current->next;
 	current->next = new;
 }
