@@ -45,10 +45,15 @@ BONUS = ft_lstnew.c                    \
 			ft_lstlast.c                  \
 			ft_lstadd_back.c              \
 			ft_lstiter.c                  \
+			ft_lstdelone.c                \
+			ft_lstclear.c                 \
 
 OBJS = $(SRCS:.c=.o)
 
-BONUS_OBJ = $(BONUS:.c=.o)
+BONUSR = $(BONUS:.c=.o)
+
+bonus: $(NAME) $(BONUSR)
+	ar rcs $(NAME)  $(BONUSR)
 
 all: $(NAME)
 
