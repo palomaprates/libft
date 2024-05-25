@@ -6,11 +6,12 @@
 /*   By: paloma <paloma@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 15:03:24 by pprates-          #+#    #+#             */
-/*   Updated: 2024/05/09 21:37:36 by paloma           ###   ########.fr       */
+/*   Updated: 2024/05/22 11:12:10 by paloma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
@@ -35,10 +36,10 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	return(temp);
 }
 
-// int main()
-// {
-// 	unsigned char *str;
-// 	str = ft_calloc(2, 3);
-// 	printf("%s\n", str); 
-// 	return (0);
-// }
+int main()
+{
+	unsigned char *str;
+	str = ft_calloc(2, 3);
+	printf("%s\n", str); 
+	return (0);
+}

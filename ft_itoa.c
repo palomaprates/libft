@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pprates- <pprates-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: paloma <paloma@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 18:33:58 by pprates-          #+#    #+#             */
-/*   Updated: 2024/05/07 15:56:30 by pprates-         ###   ########.fr       */
+/*   Updated: 2024/05/22 10:36:56 by paloma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ char	*ft_itoa(int n)
 	return (str);
 }
 
-//int main()
+// int main()
 // {
 // 	printf("%s\n", ft_itoa(-154));
 // 	return (0);

@@ -11,5 +11,5 @@ void ft_lstclear(t_list **lst, void (*del)(void*))
 		current = current->next;
 	}
 	*lst = NULL;
-	free(*lst);
+	free (current);
 }
