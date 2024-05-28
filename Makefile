@@ -1,7 +1,5 @@
 NAME = libft.a
 
-CC = cc
-
 CFLAGS = -Wall -Wextra -Werror
 
 SRCS = ft_tolower.c                   \
@@ -50,18 +48,24 @@ BONUS = ft_lstnew.c                    \
 
 OBJS = $(SRCS:.c=.o)
 
-BONUSR = $(BONUS:.c=.o)
-
-bonus: $(NAME) $(BONUSR)
-	ar rcs $(NAME)  $(BONUSR)
+BONUS_OBJS = $(BONUS:.c=.o)
 
 all: $(NAME)
+
+$(OBJS): $(SRCS)
+	$(CC) $(CFLAGS) -c $(SRCS)
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
+bonus: $(BONUS_OBJS)
+
+$(BONUS_OBJS): $(BONUS)
+	$(CC) $(CFLAGS) -c $(BONUS)
+	ar rcs $(NAME) $(BONUS_OBJS)
+
 clean:
-	rm -rf $(OBJS)
+	 rm -rf $(OBJS) $(BONUS_OBJS)
 
 fclean: clean
 	rm -rf $(NAME)

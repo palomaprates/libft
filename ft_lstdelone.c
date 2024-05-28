@@ -3,16 +3,16 @@
 
 void del(void *teste)
 {
-        // free(teste);
+        free(teste);
 }
 
 void    ft_lstdelone(t_list *lst, void (*del)(void*))
 {
         del(lst->content);
-        // free(lst);
+        free(lst);
 }
-int     main()
-{
-        t_list *new = ft_lstnew(ft_strdup("123"));
-        ft_lstdelone(new, del);
-}
+// int     main()
+// {
+//         t_list *new = ft_lstnew(ft_strdup("123"));
+//         ft_lstdelone(new, del);
+// }
