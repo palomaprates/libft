@@ -6,7 +6,7 @@
 /*   By: pprates- <pprates-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 12:33:43 by pprates-          #+#    #+#             */
-/*   Updated: 2024/05/07 18:29:20 by pprates-         ###   ########.fr       */
+/*   Updated: 2024/05/28 16:17:03 by pprates-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	unsigned char	*temp_s1;
 	unsigned char	*temp_s2;
-	size_t				i;
+	size_t			i;
 
 	i = 0;
 	temp_s1 = (unsigned char *)s1;

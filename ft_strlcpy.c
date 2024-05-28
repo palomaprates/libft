@@ -6,7 +6,7 @@
 /*   By: pprates- <pprates-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 21:06:50 by paloma            #+#    #+#             */
-/*   Updated: 2024/05/07 19:10:02 by pprates-         ###   ########.fr       */
+/*   Updated: 2024/05/28 16:19:41 by pprates-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t dest_size)
 		}
 		dest[i] = '\0';
 	}
-	
 	while (src[src_len])
 		src_len++;
 	return (src_len);

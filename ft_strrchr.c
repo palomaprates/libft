@@ -6,7 +6,7 @@
 /*   By: pprates- <pprates-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 11:16:22 by pprates-          #+#    #+#             */
-/*   Updated: 2024/05/07 19:02:44 by pprates-         ###   ########.fr       */
+/*   Updated: 2024/05/28 16:30:45 by pprates-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	char	c1;
-	int	end;
+	int		end;
 
 	c1 = (char) c;
 	end = ft_strlen(s) - 1;

@@ -6,7 +6,7 @@
 /*   By: pprates- <pprates-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 20:50:12 by pprates-          #+#    #+#             */
-/*   Updated: 2024/05/07 16:46:05 by pprates-         ###   ########.fr       */
+/*   Updated: 2024/05/28 16:26:29 by pprates-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,14 @@
 // 		*c += 32;
 // }
 
-void	ft_striteri(char *s, void (*f)(char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	unsigned int	i;
 
 	i = 0;
 	while (s[i])
 	{
-		f(&s[i]);
+		f(i, &s[i]);
 		i++;
 	}
 }

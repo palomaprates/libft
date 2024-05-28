@@ -3,23 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paloma <paloma@student.42.fr>              +#+  +:+       +#+        */
+/*   By: pprates- <pprates-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 16:22:14 by pprates-          #+#    #+#             */
-/*   Updated: 2024/05/08 22:04:01 by paloma           ###   ########.fr       */
+/*   Updated: 2024/05/28 16:27:59 by pprates-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// static char	ft_toupper1(char c)
+// char	ft_toupper1(char c)
 // {
 // 	if (c >= 'a' && c <= 'z')
 // 		c -= 32;
 // 	return (c);
 // }
 
-char	*ft_strmapi(char const *s, char (*f)(char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char				*new;
 	unsigned int		i;
@@ -33,7 +33,7 @@ char	*ft_strmapi(char const *s, char (*f)(char))
 	i = 0;
 	while (s[i])
 	{
-		new[i] = f(s[i]);
+		new[i] = f(i, s[i]);
 		i++;
 	}
 	new[i] = '\0';
